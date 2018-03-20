@@ -1,4 +1,4 @@
-import numpy as np
+from . import np
 
 def load_planar_dataset():
     np.random.seed(1)

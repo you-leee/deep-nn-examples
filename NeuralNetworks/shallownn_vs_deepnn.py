@@ -1,6 +1,6 @@
 from NeuralNetworks.dataload_utils.load_cat_images import load_cat_images
-from NeuralNetworks.nn_utils.models import L_layer_model
-from NeuralNetworks.nn_utils.predict import predict_binary
+from NeuralNetworks.nn_funcs.model import L_layer_model
+from NeuralNetworks.nn_funcs.predict import predict_binary
 import matplotlib.pyplot as plt
 import numpy as np
 

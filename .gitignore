@@ -1,2 +1,4 @@
-.venv/ 
+venv/
 .idea/
+Deep_Learning_Examples.egg-info/**
+__pycache__/

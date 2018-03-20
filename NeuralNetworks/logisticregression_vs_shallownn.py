@@ -2,10 +2,10 @@ import matplotlib.pyplot as plt
 
 from NeuralNetworks.dataload_utils.load_planar import load_planar_dataset
 from NeuralNetworks.plot_utils.plot_decision_boundary import plot_decision_boundary
-from NeuralNetworks.nn_utils.models import L_layer_model
-from NeuralNetworks.nn_utils.predict import predict_binary
-from NeuralNetworks.regression_utils.logistic_regression import *
-from NeuralNetworks.regression_utils.predict import logistic_predict
+from NeuralNetworks.nn_funcs.model import L_layer_model
+from NeuralNetworks.nn_funcs.predict import predict_binary
+from NeuralNetworks.regression_funcs.logistic_regression import *
+from NeuralNetworks.regression_funcs.predict import logistic_predict
 
 
 if __name__ == '__main__':

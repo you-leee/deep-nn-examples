@@ -12,5 +12,6 @@ setup(name='Deep Learning Examples',
           'numpy',
           'matplotlib',
           'h5py',
+          'tensorflow',
       ],
       zip_safe=False)

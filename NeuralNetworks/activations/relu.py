@@ -1,9 +1,6 @@
 from . import np
 
 
-
-
-
 def relu(Z):
     """
     Implement the RELU function.

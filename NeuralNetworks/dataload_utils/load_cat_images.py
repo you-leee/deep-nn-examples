@@ -1,4 +1,4 @@
-import numpy as np
+from . import np
 import h5py
 
 
