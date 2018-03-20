@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from NeuralNetworks.dataload_utils.one_hot import convert_to_one_hot
-from NeuralNetworks.dataload_utils.load_sings import load_signs
+from commons.dataload_utils.one_hot import convert_to_one_hot
+from commons.dataload_utils.load_sings import load_signs
 from NeuralNetworks.tf_nn_funcs.model import tf_3L_model
 from NeuralNetworks.tf_nn_funcs.predict import predict
 

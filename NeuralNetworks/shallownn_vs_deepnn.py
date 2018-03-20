@@ -1,4 +1,4 @@
-from NeuralNetworks.dataload_utils.load_cat_images import load_cat_images
+from commons.dataload_utils.load_cat_images import load_cat_images
 from NeuralNetworks.nn_funcs.model import L_layer_model
 from NeuralNetworks.nn_funcs.predict import predict_binary
 import matplotlib.pyplot as plt

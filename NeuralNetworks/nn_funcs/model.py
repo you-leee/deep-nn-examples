@@ -1,11 +1,11 @@
 from . import np
 from .initialization import initialize_parameters_zeros, initialize_parameters_random, initialize_parameters_he
-from ..minibatch_utils.random_mini_batches import random_mini_batches
+from commons.minibatch_utils.random_mini_batches import random_mini_batches
 from .propagate import L_model_forward, compute_cost, L_model_backward
 from .optimization import initialize_adam, update_parameters_with_adam, initialize_velocity, \
     update_parameters_with_momentum, update_parameters
 from .predict import predict_binary
-from ..plot_utils.plot_cost import plot_cost
+from commons.plot_utils.plot_cost import plot_cost
 
 
 def L_layer_model(X_train, Y_train, layers_dims, X_test=None, Y_test=None, num_epochs=1000, mini_batch_size=None,

@@ -3,6 +3,7 @@ from .propagate import logistic_propagate
 from .optimize import optimize
 from . import np
 
+
 def logistic_model(X_train, Y_train, X_test=None, Y_test=None, num_iterations=2000, learning_rate=0.5, print_cost=False):
     """
     Builds the logistic regression model by calling the function you've implemented previously

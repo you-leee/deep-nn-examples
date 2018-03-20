@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
-from NeuralNetworks.dataload_utils.load_planar import load_planar_dataset
-from NeuralNetworks.plot_utils.plot_decision_boundary import plot_decision_boundary
+from commons.dataload_utils.load_planar import load_planar_dataset
+from commons.plot_utils.plot_decision_boundary import plot_decision_boundary
 from NeuralNetworks.nn_funcs.model import L_layer_model
 from NeuralNetworks.nn_funcs.predict import predict_binary
 from NeuralNetworks.regression_funcs.logistic_regression import *

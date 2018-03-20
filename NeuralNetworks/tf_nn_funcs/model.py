@@ -1,8 +1,8 @@
 from tensorflow.python.framework import ops
-from ..plot_utils.plot_cost import plot_cost
+from commons.plot_utils.plot_cost import plot_cost
 from .propagate import *
 from .initialization import *
-from ..minibatch_utils.random_mini_batches import random_mini_batches
+from commons.minibatch_utils.random_mini_batches import random_mini_batches
 
 
 def tf_3L_model(X_train, Y_train, X_test, Y_test, learning_rate=0.0001, num_epochs=1500, minibatch_size=32, print_cost=True):

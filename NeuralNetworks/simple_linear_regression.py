@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from NeuralNetworks.regression_funcs.linear_regression import linear_model
-from NeuralNetworks.plot_utils.plot_cost import plot_cost
+from commons.plot_utils import plot_cost
 
 
 if __name__ == '__main__':

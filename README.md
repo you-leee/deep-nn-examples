@@ -29,7 +29,7 @@ This is the list of finished examples.. others will follow!
 * Simple linear regression
 `NeuralNetworks/simple_linear_regression.py`
 
-  Plain and simple implementation of linear regression aming to demonstrate how you can approximate data points, that are close to a linear function (in this example y = 2*x + 4).
+  Plain and simple implementation of linear regression aming to demonstrate how you can approximate data points, that are close to a linear function (in this example y = 2\*x + 4).
 
 * Logistic regression vs shallow neural networks
 `NeuralNetworks/logisticregression_vs_shallownn.py`
@@ -46,8 +46,16 @@ This is the list of finished examples.. others will follow!
 
    A 1 hidden layer neural network is used to classify hand signs to numbers (0-9). It is an example on how to implement a simple model using tensorflow, instead of coding the backpropagation/optimization yourself.
 ---
+#### Convolutional Neural Networks
+* Simple linear regression
+`ConvolutionalNeuralNetworks/cnn_sign_classification.py`
+
+   This demo uses convolutional (and pooling) layers to address the same problem as in the example above ("Hand (number) sign classification with tensorflow" ). The main advantage of using convolutional layers on images is, that you have much less parameters as with a fully connected layer. For example: If the images are only of size 32x32x3 (32 wide, 32 high, 3 color channels), a single fully-connected neuron in a first hidden layer would have 32\*32\*3 = 3072 weights, whereas a convolutional layer with one 4x4 filter has only 4\*4\*3 = 48.
+
 
 ## References
 - Python setup: https://docs.python.org/3/distutils/setupscript.html
 - Tensorflow: https://www.tensorflow.org
 - Deep learning course: https://www.coursera.org/specializations/deep-learning
+- Intuitive explonation of ConvNets: https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/
+- ConvNet CIFAR-10: https://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html
