@@ -40,10 +40,10 @@ if __name__ == '__main__':
     for i, n_h in enumerate(hidden_layer_sizes):
         plt.subplot(3, 3, i + 1)
         plt.title('Hidden Layer of size %d' % n_h)
+        print("{} hidden units".format(n_h))
         parameters = L_layer_model(X, Y, [X.shape[0], n_h, Y.shape[0]], num_epochs=5000, learning_rate=0.1)
         plot_decision_boundary(lambda x: predict_binary(parameters, x.T), X, Y)
         predictions = predict_binary(parameters, X)
         accuracy = float((np.dot(Y, predictions.T) + np.dot(1 - Y, 1 - predictions.T)) / float(Y.size) * 100)
-        print("Accuracy for {} hidden units: {} %".format(n_h, accuracy))
 
     plt.show()

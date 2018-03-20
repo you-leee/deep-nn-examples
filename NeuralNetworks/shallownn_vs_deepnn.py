@@ -42,18 +42,18 @@ if __name__ == '__main__':
     # Train 2 layer network
     print('Train shallow neural net with only 1 hidden layer')
     layers = [n_x, 7, 1]
-    parameters = L_layer_model(train_set_x, train_set_y, layers, test_set_x, test_set_y, num_epochs=2500,
+    shallow_parameters = L_layer_model(train_set_x, train_set_y, layers, test_set_x, test_set_y, num_epochs=1500,
                                  learning_rate=0.0075, print_cost=True)
 
     # Train 5 layer model
-    print('\nTrain deeper neural net with only 3 hidden layers')
+    print('\nTrain deeper neural net with 3 hidden layers')
     layers = [n_x, 20, 7, 5, 1]
-    parameters = L_layer_model(train_set_x, train_set_y, layers, test_set_x, test_set_y, num_epochs=2500,
+    deep_parameters = L_layer_model(train_set_x, train_set_y, layers, test_set_x, test_set_y, num_epochs=1500,
                                  learning_rate=0.0075, print_cost=True)
 
     # Example of a prediction
     index = 25
-    pred = predict_binary(parameters, train_set_x_flatten[:, index:(index + 1)])
+    pred = predict_binary(deep_parameters, train_set_x_flatten[:, index:(index + 1)])
     print("Prediction for picture {}: {}".format(index, np.squeeze(pred)))
 
     plt.figure(10)
