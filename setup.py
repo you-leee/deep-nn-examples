@@ -13,5 +13,7 @@ setup(name='Deep Learning Examples',
           'matplotlib',
           'h5py',
           'tensorflow',
+          'keras',
+          'nltk',
       ],
       zip_safe=False)
