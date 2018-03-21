@@ -30,6 +30,11 @@ This is the list of finished examples.. others will follow!
 `NeuralNetworks/simple_linear_regression.py`
 
   Plain and simple implementation of linear regression aming to demonstrate how you can approximate data points, that are close to a linear function (in this example y = 2\*x + 4).
+ 
+* Document classification with word embedding
+`NeuralNetworks/doc_classification_apple.py`
+
+  An example on how to lear word embeddings using a neural network. The training data contains text from both Apple Inc. and the apple fruit and the goal is to categorize new text into one of these classes. There is a lot of room for improvement, like getting more training data, filtering stop words better or restricting the vocabulary... Feel free to play around!
 
 * Logistic regression vs shallow neural networks
 `NeuralNetworks/logisticregression_vs_shallownn.py`
@@ -59,3 +64,4 @@ This is the list of finished examples.. others will follow!
 - Deep learning course: https://www.coursera.org/specializations/deep-learning
 - Intuitive explonation of ConvNets: https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/
 - ConvNet CIFAR-10: https://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html
+- Word embeddings: https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/
