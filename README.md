@@ -52,7 +52,7 @@ This is the list of finished examples.. others will follow!
    A 1 hidden layer neural network is used to classify hand signs to numbers (0-9). It is an example on how to implement a simple model using tensorflow, instead of coding the backpropagation/optimization yourself.
 ---
 #### Convolutional Neural Networks
-* Simple linear regression
+* Hand sign classification with convolutional networks
 `ConvolutionalNeuralNetworks/cnn_sign_classification.py`
 
    This demo uses convolutional (and pooling) layers to address the same problem as in the example above ("Hand (number) sign classification with tensorflow" ). The main advantage of using convolutional layers on images is, that you have much less parameters as with a fully connected layer. For example: If the images are only of size 32x32x3 (32 wide, 32 high, 3 color channels), a single fully-connected neuron in a first hidden layer would have 32\*32\*3 = 3072 weights, whereas a convolutional layer with one 4x4 filter has only 4\*4\*3 = 48.
