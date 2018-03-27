@@ -34,7 +34,7 @@ This is the list of finished examples.. others will follow!
 * Document classification with word embedding
 `NeuralNetworks/doc_classification_apple.py`
 
-  An example on how to lear word embeddings using a neural network. The training data contains text from both Apple Inc. and the apple fruit and the goal is to categorize new text into one of these classes. There is a lot of room for improvement, like getting more training data, filtering stop words better or restricting the vocabulary... Feel free to play around!
+  An example on how to learn word embeddings using a neural network. The training data contains text from both Apple Inc. and the apple fruit and the goal is to categorize new text into one of these classes. There is a lot of room for improvement, like getting more training data, filtering stop words better or restricting the vocabulary... Feel free to play around!
 
 * Logistic regression vs shallow neural networks
 `NeuralNetworks/logisticregression_vs_shallownn.py`

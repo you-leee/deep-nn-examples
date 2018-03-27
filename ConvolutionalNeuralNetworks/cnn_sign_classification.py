@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from ConvolutionalNeuralNetworks.cnn_funcs.cnn_model import cnn_3L_model
 from commons.dataload_utils.load_sings import load_signs
-from commons.dataload_utils.one_hot import convert_to_one_hot
+from commons.datatransform_utils.one_hot import convert_to_one_hot
 
 if __name__ == '__main__':
     np.random.seed(1)
