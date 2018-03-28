@@ -1,4 +1,5 @@
 
+
 # deep-nn-examples
 
 This repository contains toy examples of shallow and deep neural networks along with convolutional and recurrent neural networks.
@@ -57,6 +58,11 @@ This is the list of finished examples.. others will follow!
 
    This demo uses convolutional (and pooling) layers to address the same problem as in the example above ("Hand (number) sign classification with tensorflow" ). The main advantage of using convolutional layers on images is, that you have much less parameters as with a fully connected layer. For example: If the images are only of size 32x32x3 (32 wide, 32 high, 3 color channels), a single fully-connected neuron in a first hidden layer would have 32\*32\*3 = 3072 weights, whereas a convolutional layer with one 4x4 filter has only 4\*4\*3 = 48.
 
+* The RESNET50
+`ConvolutionalNeuralNetworks/resnet_mnist.py`
+
+   In this example, the famous mnist hand written digit dataset is used to train the ResNet50 network, which uses residual blocks. It is a bit "overkill" to use such a big network for this task, but the goal here is to learn a bit about deep residual networks. So what is a residual network? The main idea is, that to "tweek" the mathematical formula with an identity function, such as: f(x) + x = f(x) + id(x) = y. Identity connections enable the layers to learn incremental, or residual representations. The layers can start as the identity function and gradually transform to be more complex. This significantly helps deeper networks in the training process, since the gradient signal vanishes with increasing network depth, but the identity connections in ResNets propagate the gradient throughout the model.
+
 
 ## References
 - Python setup: https://docs.python.org/3/distutils/setupscript.html
@@ -65,3 +71,4 @@ This is the list of finished examples.. others will follow!
 - Intuitive explonation of ConvNets: https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/
 - ConvNet CIFAR-10: https://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html
 - Word embeddings: https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/
+- Deep Residual Networks: https://github.com/KaimingHe/deep-residual-networks
