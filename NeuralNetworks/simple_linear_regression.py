@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from NeuralNetworks.regression_funcs.linear_regression import linear_model
-from commons.plot_utils import plot_cost
+from commons.plot_utils.plot_cost import plot_cost
 
 
 if __name__ == '__main__':
@@ -9,7 +9,7 @@ if __name__ == '__main__':
     X = np.reshape(X, (1, X.shape[0]))
     Y = X * 2 + 4 + (np.random.randn(100) / 2)
 
-    iters = 40000
+    iters = 30000
     lr = 0.00025
     slr_model = linear_model(X, Y, print_cost=True, num_iterations=iters, learning_rate=lr)
     plot_cost(slr_model['costs'], lr)
