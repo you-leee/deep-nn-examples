@@ -31,6 +31,10 @@ This is the list of finished examples.. others will follow!
 `NeuralNetworks/simple_linear_regression.py`
 
   Plain and simple implementation of linear regression aming to demonstrate how you can approximate data points, that are close to a linear function (in this example y = 2\*x + 4).
+
+Cost            |  Fitted vs values
+:-------------------------:|:-------------------------:
+<img src="https://raw.githubusercontent.com/you-leee/deep-nn-examples/master/docs/images/slr_curve.png" width="300">|<img src="https://raw.githubusercontent.com/you-leee/deep-nn-examples/master/docs/images/slr_fitted.png" width="300">
  
 * Document classification with word embedding
 `NeuralNetworks/doc_classification_apple.py`
