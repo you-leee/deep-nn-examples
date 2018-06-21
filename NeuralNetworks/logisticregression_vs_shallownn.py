@@ -35,7 +35,7 @@ if __name__ == '__main__':
 
     # Tuning hidden layer size
     plt.figure(figsize=(16, 32))
-    plt.subplots_adjust(wspace=0.3, hspace=0.4)
+    plt.subplots_adjust(wspace=0.3, hspace=0.45)
     hidden_layer_sizes = [1, 2, 3, 4, 5, 10, 20, 50, 100]
     for i, n_h in enumerate(hidden_layer_sizes):
         plt.subplot(3, 3, i + 1)
