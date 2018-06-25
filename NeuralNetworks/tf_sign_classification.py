@@ -9,11 +9,6 @@ from NeuralNetworks.tf_nn_funcs.predict import predict
 if __name__ == '__main__':
     X_train_orig, Y_train_orig, X_test_orig, Y_test_orig, classes = load_signs() # Loading the dataset
 
-    index = 0
-    plt.imshow(X_train_orig[index])
-    plt.show()
-
-
     # Flatten the training and test images
     X_train_flatten = X_train_orig.reshape(X_train_orig.shape[0], -1).T
     X_test_flatten = X_test_orig.reshape(X_test_orig.shape[0], -1).T
@@ -28,6 +23,10 @@ if __name__ == '__main__':
 
 
     # Predict sign with index
+    index = 0
     X_pred = X_train[:, [index]]
     y_hat = predict(X_pred, parameters)
-    print("Prediction for index {} is {}. Original class is {}".format(index, y_hat, np.squeeze(Y_train_orig[:, index])))
+
+    plt.title("Predicted class is {}. Original class is {}".format(y_hat, np.squeeze(Y_train_orig[:, index])))
+    plt.imshow(X_train_orig[index])
+    plt.show()

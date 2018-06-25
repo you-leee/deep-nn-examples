@@ -3,6 +3,7 @@ from tensorflow.python.framework import ops
 from commons.minibatch_utils.random_mini_batches import random_mini_batches_image
 from commons.plot_utils.plot_cost import plot_cost
 
+
 def forward_propagation(X, parameters):
     """
     Implements the forward propagation for the model:
@@ -35,7 +36,7 @@ def forward_propagation(X, parameters):
     P2 = tf.nn.max_pool(A2, ksize=[1, 4, 4, 1], strides=[1, 4, 4, 1], padding='SAME')
     # FLATTEN
     P2 = tf.contrib.layers.flatten(P2)
-    # FULLY-CONNECTED without non-linear activation function (not not call softmax).
+    # FULLY-CONNECTED without non-linear activation function (not call softmax).
     # 6 neurons in output layer.
     Z3 = tf.contrib.layers.fully_connected(P2, 6, activation_fn=None)
 
