@@ -41,7 +41,8 @@ Cost            |  Fitted vs values
 `NeuralNetworks/doc_classification_apple.py`
 
   An example on how to learn word embeddings using a neural network. The training data contains text from both Apple Inc. and the apple fruit and the goal is to categorize new text into one of these classes. There is a lot of room for improvement, like getting more training data, filtering stop words better or restricting the vocabulary... Feel free to play around!
- `Predicting for sample sentence about the apple fruit: 
+ 
+   `Predicting for sample sentence about the apple fruit: 
   "The world crop of apples averages more than 60 million metric tons a year. Of the American crop, more than half is normally used as fresh fruit."
 Prediction: 0.8536878228187561, actual value: 1`
 
@@ -91,7 +92,7 @@ Architecture|
 
 Accurately classified examples| Misclassified examples
 :-----------------:|:-----------------:
-<img src="https://raw.githubusercontent.com/you-leee/deep-nn-examples/master/docs/images/rnn_acc_classified.png" width="500">|<img src="https://raw.githubusercontent.com/you-leee/deep-nn-examples/master/docs/images/rnn_misclassified.png" width="390">
+<img src="https://raw.githubusercontent.com/you-leee/deep-nn-examples/master/docs/images/rnn_acc_classified.png" width="450">|<img src="https://raw.githubusercontent.com/you-leee/deep-nn-examples/master/docs/images/rnn_misclassified.png" width="400">
 
 ## References
 - Python setup: https://docs.python.org/3/distutils/setupscript.html

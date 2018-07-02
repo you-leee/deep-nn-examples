@@ -2,3 +2,4 @@ venv/
 .idea/
 Deep_Learning_Examples.egg-info/**
 __pycache__/
+datasets/yolo_images/out/**

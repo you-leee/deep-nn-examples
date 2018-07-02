@@ -52,7 +52,7 @@ if __name__ == '__main__':
     # Plot some misclassified examples
     grid_size = 4
     num_plots = min(len(incorrect), grid_size * grid_size)
-
+    
     plt.figure(figsize=(8, 8))
     plt.subplots_adjust(wspace=0.15, hspace=0.4)
     plt.rcParams.update({'font.size': 7})
@@ -65,13 +65,12 @@ if __name__ == '__main__':
         plt.title('Predicted {} - Actual {}'.format(predicted, actual))
         plt.imshow(X_test_orig[i, :, :, 0], cmap='gray')
     plt.show()
-
     
     # Plot some accurately classified examples
     plt.figure(figsize=(8, 8))
     plt.subplots_adjust(wspace=0.15, hspace=0.4)
     plt.rcParams.update({'font.size': 7})
-
+    
     for c, i in enumerate(correct[0:num_plots]):
         plt.subplot(grid_size, grid_size, c + 1)
         predicted = preds[i]

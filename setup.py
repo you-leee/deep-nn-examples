@@ -15,5 +15,7 @@ setup(name='Deep Learning Examples',
           'tensorflow',
           'keras',
           'nltk',
+          'pillow',
+          'scipy',
       ],
       zip_safe=False)
