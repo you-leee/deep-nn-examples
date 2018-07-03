@@ -96,6 +96,18 @@ Accurately classified examples| Misclassified examples
 
 * YOLO (you only look once)
 `ConvolutionalNeuralNetworks/yolo_car_detection.py`
+   YOLO is a new approach of object detection with a great performance on real-time. A single neural network predicts bounding boxes and class probabilities directly from full images in one evaluation. The classic model can process 45 frames per second, that's why it's popularity.
+   
+ Architecture|
+:-----------------:|
+<img src="https://raw.githubusercontent.com/you-leee/deep-nn-examples/master/docs/images/yolo_architecture.png" width="850">|
+
+   The model has 2 main steps: 
+   - Detection: A single convolutional network simultaneously predicts multiple bounding boxes and class probabilities for those boxes.
+<img src="https://raw.githubusercontent.com/you-leee/deep-nn-examples/master/docs/images/yolo_detection.png" width="490">|
+
+   - Filtering: Boxes with less probabilty, than the threshhold are disregarded. On the remaining boxes , a simple non-max surpression function prunes away boxes that have high intersection-over-union (IOU) overlap with maximum probability box.
+
 
 ## References
 - Python setup: https://docs.python.org/3/distutils/setupscript.html
@@ -105,3 +117,4 @@ Accurately classified examples| Misclassified examples
 - ConvNet CIFAR-10: https://cs.stanford.edu/people/karpathy/convnetjs/demo/cifar10.html
 - Word embeddings: https://www.analyticsvidhya.com/blog/2017/06/word-embeddings-count-word2veec/
 - Deep Residual Networks: https://github.com/KaimingHe/deep-residual-networks
+- YOLO original paper: https://arxiv.org/pdf/1506.02640.pdf
