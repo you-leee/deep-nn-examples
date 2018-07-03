@@ -308,13 +308,14 @@ def yolo_head(feats, anchors, num_classes):
     return box_confidence, box_xy, box_wh, box_class_probs
 
 
-def predict(sess, yolo_model, image_file, scores, boxes, classes, class_names, image_shape=(608., 608.)):
+def predict(sess, yolo_model, image_path, image_file, scores, boxes, classes, class_names, image_shape=(608, 608)):
         """
         Runs the graph stored in "sess" to predict boxes for "image_file". Prints and plots the preditions.
 
         Arguments:
         sess -- your tensorflow/Keras session containing the YOLO graph
         yolo_model -- pretrained yolo model
+        image_path -- path to input images and output folder
         image_file -- name of an image stored in the "images" folder.
         scores -- tensor of shape (, None), predicted score for each box
         boxes -- tensor of shape (4, None), predicted box coordinates
@@ -331,7 +332,7 @@ def predict(sess, yolo_model, image_file, scores, boxes, classes, class_names, i
         """
 
         # Preprocess your image
-        image, image_data = preprocess_image("../datasets/yolo_images/" + image_file, model_image_size=image_shape)
+        image, image_data = preprocess_image(image_path + image_file, model_image_size=image_shape)
 
         # Run the session with the correct tensors and choose the correct placeholders in the feed_dict.
         out_scores, out_boxes, out_classes = sess.run([scores, boxes, classes],
@@ -344,9 +345,9 @@ def predict(sess, yolo_model, image_file, scores, boxes, classes, class_names, i
         # Draw bounding boxes on the image file
         draw_boxes(image, out_scores, out_boxes, out_classes, class_names, colors)
         # Save the predicted bounding box on the image
-        image.save(os.path.join("../datasets/yolo_images/out", image_file), quality=90)
+        image.save(os.path.join(image_path, "out", image_file), quality=90)
         # Display the results
-        output_image = scipy.misc.imread(os.path.join("../datasets/yolo_images/out", image_file))
+        output_image = scipy.misc.imread(os.path.join(image_path, "out", image_file))
         imshow(output_image)
         show()
 

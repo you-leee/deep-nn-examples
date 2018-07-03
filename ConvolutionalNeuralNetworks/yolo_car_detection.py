@@ -1,3 +1,4 @@
+import os
 from keras import backend as K
 from keras.models import load_model
 from ConvolutionalNeuralNetworks.yolo.yolo_funcs import yolo_eval, read_classes, read_anchors, yolo_head, predict
@@ -13,9 +14,7 @@ if __name__ == '__main__':
     yolo_outputs = yolo_head(yolo_model.output, anchors, len(class_names))
     scores, boxes, classes = yolo_eval(yolo_outputs, image_shape)
 
-    predict(sess,yolo_model, "1.jpg", scores, boxes, classes, class_names)
-    predict(sess,yolo_model, "2.jpg", scores, boxes, classes, class_names)
-    predict(sess,yolo_model, "3.jpg", scores, boxes, classes, class_names)
-    predict(sess,yolo_model, "4.jpg", scores, boxes, classes, class_names)
-    predict(sess,yolo_model, "5.jpg", scores, boxes, classes, class_names)
-    predict(sess,yolo_model, "6.jpg", scores, boxes, classes, class_names)
+    image_path = "../datasets/yolo_images/"
+    for file in os.listdir(image_path):
+        if os.path.isfile(os.path.join(image_path, file)):
+            predict(sess, yolo_model,image_path, file, scores, boxes, classes, class_names)
